@@ -3,10 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Pizzeria.App"
         mc:Ignorable="d"
         Title="Pizzeria" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="LightGray">
+            <TextBlock Text="PIZZAS" Margin="20,2,0,0" FontWeight="Bold"/>
+        </Border>
+
+        <ListBox Grid.Row="1"
+                 ItemsSource="{Binding Pizzas}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="160">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="160" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" />
+                        <Image Grid.Row="1"
+                            Source="{Binding ImagePath}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Border Grid.Column="1" Background="LightGreen">
+            <TextBlock Text="ORDERS" Margin="20,2,0,0" FontWeight="Bold"/>
+        </Border>
+
+        <ListBox Grid.Row="1" Grid.Column="1" 
+                ItemsSource="{Binding Orders}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock Text="{Binding Name}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
+            <Button Content="New Pizza" Width="200" />
+            <Button Content="Edit Pizza" Width="200" />
+        </StackPanel>
     </Grid>
 </Window>

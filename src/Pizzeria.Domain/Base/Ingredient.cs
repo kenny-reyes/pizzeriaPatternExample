@@ -2,22 +2,10 @@
 {
     public abstract class Ingredient
     {
-        private string _name;
-        private string _imagePath;
-        private IngredientType _type;
+        public abstract string Name { get; } 
 
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        public abstract string ImagePath { get; }
 
-        public string ImagePath
-        {
-            get { return _imagePath; }
-            set { _imagePath = value; }
-        }
-
-        public IngredientType Type { get => _type; set => _type = value; }
+        public abstract IngredientType Type { get; }
     }
 }

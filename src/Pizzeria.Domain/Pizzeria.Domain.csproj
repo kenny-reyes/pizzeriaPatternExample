@@ -48,6 +48,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IngredientFactory.cs" />
+    <Compile Include="IngredientList.cs" />
+    <Compile Include="OrderList.cs" />
     <Compile Include="PizzaList.cs" />
     <Compile Include="Enums\IngredientType.cs" />
     <Compile Include="Ingredients\Bacon.cs" />
@@ -75,6 +78,9 @@
       <Project>{ed4aad09-1417-4978-9979-3baf61c694d5}</Project>
       <Name>Pizzeria.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

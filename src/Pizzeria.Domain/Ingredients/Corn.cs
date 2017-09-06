@@ -2,11 +2,10 @@
 {
     public class Corn : Ingredient
     {
-        public Corn()
-        {
-            Name = "Maiz";
-            ImagePath = @"Resources\Corn.bmp";
-            Type = IngredientType.Vegetal;
-        }
+        public override string Name => "Maiz";
+
+        public override string ImagePath => @"Resources\Corn.png";
+
+        public override IngredientType Type => IngredientType.Vegetal;
     }
 }

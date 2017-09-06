@@ -6,19 +6,20 @@ namespace Pizzeria.Domain.Base
     /// <summary>
     /// Singleton
     /// </summary>
-    public class PizzaList
+    public class PizzaList : ObservableCollection<Pizza>
     {
-        private static readonly Lazy<ObservableCollection<Pizza>> _instance = new Lazy<ObservableCollection<Pizza>>(() => new ObservableCollection<Pizza>());
+        private static readonly Lazy<PizzaList> _instance = new Lazy<PizzaList>(() => new PizzaList());
 
         private PizzaList()
         {
         }
 
-        public static ObservableCollection<Pizza> Instance
+        public static PizzaList Instance
         {
             get
             {
                 return _instance.Value;
             }
         }
+    }
 }

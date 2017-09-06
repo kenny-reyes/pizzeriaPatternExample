@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Pizzeria.Domain
 {
@@ -7,9 +6,9 @@ namespace Pizzeria.Domain
     {
         private string _name;
         private string _imagePath;
-        private List<Ingredient> _ingredientList;
+        private IngredientList _ingredientList;
 
-        public Pizza(string name, string imagePath, List<Ingredient> ingredientList)
+        public Pizza(string name, string imagePath, IngredientList ingredientList)
         {
             _name = name;
             _imagePath = imagePath;
@@ -24,11 +23,11 @@ namespace Pizzeria.Domain
 
         public string ImagePath
         {
-            get { return _imagePath; }
+            get { return AppDomain.CurrentDomain.BaseDirectory + _imagePath; }
             set { _imagePath = value; }
         }
 
-        public List<Ingredient> IngredientList
+        public IngredientList IngredientList
         {
             get { return _ingredientList; }
             set { _ingredientList = value; }
@@ -39,7 +38,7 @@ namespace Pizzeria.Domain
         /// </summary>
         public object Clone()
         {
-            return new Pizza(_name, _imagePath, _ingredientList);
+            return new Pizza(_name, _imagePath, _ingredientList.Clone() as IngredientList);
         }
     }
 }
