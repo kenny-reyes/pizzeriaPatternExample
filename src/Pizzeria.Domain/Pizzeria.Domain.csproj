@@ -48,6 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PizzaList.cs" />
     <Compile Include="Enums\IngredientType.cs" />
     <Compile Include="Ingredients\Bacon.cs" />
     <Compile Include="Ingredients\BlueCheese.cs" />
