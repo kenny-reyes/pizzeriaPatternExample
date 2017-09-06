@@ -48,7 +48,22 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ingredient.cs" />
+    <Compile Include="Enums\IngredientType.cs" />
+    <Compile Include="Ingredients\Bacon.cs" />
+    <Compile Include="Ingredients\BlueCheese.cs" />
+    <Compile Include="Ingredients\Cheese.cs" />
+    <Compile Include="Ingredients\Chicken.cs" />
+    <Compile Include="Ingredients\Corn.cs" />
+    <Compile Include="Ingredients\Eggs.cs" />
+    <Compile Include="Ingredients\Ham.cs" />
+    <Compile Include="Base\Ingredient.cs" />
+    <Compile Include="Ingredients\Mozzarella.cs" />
+    <Compile Include="Ingredients\OldCheese.cs" />
+    <Compile Include="Ingredients\Onion.cs" />
+    <Compile Include="Ingredients\Parmesano.cs" />
+    <Compile Include="Ingredients\Pineapple.cs" />
+    <Compile Include="Ingredients\Sausage.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
