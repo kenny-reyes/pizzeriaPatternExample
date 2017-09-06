@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pizzeria.Domain.Factories;
+using System;
 using System.Collections.ObjectModel;
 
 namespace Pizzeria.Domain.Base
@@ -12,6 +13,10 @@ namespace Pizzeria.Domain.Base
 
         private PizzaList()
         {
+            Add(new FourCheesePizzaFactory().GetPizza());
+            Add(new CarbonaraPizzaFactory().GetPizza());
+            Add(new TropicalPizzaFactory().GetPizza());
+            Add(new FarmerPizzaFactory().GetPizza());
         }
 
         public static PizzaList Instance

@@ -2,12 +2,12 @@
 
 namespace Pizzeria.Domain.Pizzas
 {
-    public class FourCheesePizza : Pizza
+    public class TropicalPizza : Pizza
     {
-        public FourCheesePizza()
+        public TropicalPizza()
         {
-            Name = "4 Quesos";
-            ImagePath = @"\Resources\4Cheese.jpg";
+            Name = "Tropical";
+            ImagePath = @"\Resources\TropicalPizza.jpg";
             IngredientList = new IngredientList {
                 new Mozzarella(),
                 new BlueCheese(),

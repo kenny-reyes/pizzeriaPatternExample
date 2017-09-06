@@ -5,8 +5,8 @@ namespace Pizzeria.Domain.Factories
     /// <summary>
     /// Factory Pattern
     /// </summary>
-    public class FourCheesePizzaFactory : PizzaFactory
+    public class FarmerPizzaFactory : PizzaFactory
     {
-        public override Pizza GetPizza() => new FourCheesePizza();
+        public override Pizza GetPizza() => new FarmerPizza();
     }
 }

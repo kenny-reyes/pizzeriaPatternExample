@@ -48,10 +48,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\IngredientFactory.cs" />
+    <Compile Include="Factories\CarbonaraPizzaFactory.cs" />
+    <Compile Include="Factories\TropicalPizzaFactory.cs" />
+    <Compile Include="Factories\FarmerPizzaFactory.cs" />
     <Compile Include="Factories\FourCheesePizzaFactory.cs" />
-    <Compile Include="Factories\PizzaFactory.cs" />
+    <Compile Include="Base\PizzaFactory.cs" />
     <Compile Include="IngredientList.cs" />
+    <Compile Include="Ingredients\Pancetta.cs" />
     <Compile Include="OrderList.cs" />
     <Compile Include="PizzaList.cs" />
     <Compile Include="Enums\IngredientType.cs" />
@@ -70,6 +73,9 @@
     <Compile Include="Ingredients\Sausage.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="Pizzas\CarbonaraPizza.cs" />
+    <Compile Include="Pizzas\TropicalPizza.cs" />
+    <Compile Include="Pizzas\FarmerPizza.cs" />
     <Compile Include="Pizzas\FourCheesePizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

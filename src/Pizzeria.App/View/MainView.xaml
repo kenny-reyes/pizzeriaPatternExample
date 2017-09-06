@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Pizzeria" Height="350" Width="525">
+        Title="Pizzeria" Height="600" Width="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -20,8 +20,9 @@
             <TextBlock Text="PIZZAS" Margin="20,2,0,0" FontWeight="Bold"/>
         </Border>
 
-        <ListBox Grid.Row="1"
-                 ItemsSource="{Binding Pizzas}">
+        <ListBox Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ItemsSource="{Binding Pizzas}"
+                 SelectedItem="{Binding SelectedPizza}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
@@ -29,13 +30,13 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="160">
+                    <Grid Width="200">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20" />
-                            <RowDefinition Height="160" />
+                            <RowDefinition Height="200" />
                         </Grid.RowDefinitions>
                         <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" />
-                        <Image Grid.Row="1"
+                        <Image Grid.Row="1" Stretch="UniformToFill"
                             Source="{Binding ImagePath}" />
                     </Grid>
                 </DataTemplate>
@@ -46,7 +47,7 @@
             <TextBlock Text="ORDERS" Margin="20,2,0,0" FontWeight="Bold"/>
         </Border>
 
-        <ListBox Grid.Row="1" Grid.Column="1" 
+        <ListBox Grid.Row="1" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ItemsSource="{Binding Orders}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -54,17 +55,27 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20" />
                             <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
                         </Grid.RowDefinitions>
-                        <TextBlock Text="{Binding Name}" />
-                        <TextBlock Text="{Binding Name}" />
+                        <TextBlock 
+                            Text="{Binding Name}" />
+                        <TextBlock Grid.Row="1"
+                            Text="{Binding Phone}" />
+                        <TextBlock Grid.Row="2"
+                            Text="{Binding Pizza.Name}" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
-            <Button Content="New Pizza" Width="200" />
-            <Button Content="Edit Pizza" Width="200" />
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button Content="Crear Pizza" Width="150" 
+                    Command="{Binding NewPizzaCommand}"/>
+            <Button Content="Editar Pizza" Width="150" 
+                    Command="{Binding ModifyPizzaCommand}"/>
         </StackPanel>
+
+        <Button Content="Ordenar Pizza" Width="200" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left"
+                    Command="{Binding OrderPizzaCommand}"/>
     </Grid>
 </Window>

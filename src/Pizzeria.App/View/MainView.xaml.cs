@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Pizzeria.App.ViewModel;
+using System.Windows;
 
 namespace Pizzeria.App.View
 {
@@ -7,6 +8,7 @@ namespace Pizzeria.App.View
         public MainView()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }

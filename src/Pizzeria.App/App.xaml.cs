@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using Pizzeria.App.View;
-using Pizzeria.App.ViewModel;
 
 namespace Pizzeria.App
 {
@@ -8,10 +7,7 @@ namespace Pizzeria.App
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainView
-            {
-                DataContext = new MainViewModel()
-            };
+            MainWindow = new MainView();
             MainWindow.Show();
             base.OnStartup(e);
         }
