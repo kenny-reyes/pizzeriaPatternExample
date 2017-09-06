@@ -8,13 +8,6 @@ namespace Pizzeria.Domain
         private string _imagePath;
         private IngredientList _ingredientList;
 
-        public Pizza(string name, string imagePath, IngredientList ingredientList)
-        {
-            _name = name;
-            _imagePath = imagePath;
-            _ingredientList = ingredientList;
-        }
-
         public string Name
         {
             get { return _name; }
@@ -38,7 +31,7 @@ namespace Pizzeria.Domain
         /// </summary>
         public object Clone()
         {
-            return new Pizza(_name, _imagePath, _ingredientList.Clone() as IngredientList);
+            return new Pizza { Name = _name, ImagePath = _imagePath, IngredientList = _ingredientList.Clone() as IngredientList };
         }
     }
 }

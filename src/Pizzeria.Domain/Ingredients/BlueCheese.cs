@@ -2,10 +2,10 @@
 {
     public class BlueCheese : Ingredient
     {
-        public override string Name => throw new System.NotImplementedException();
+        public override string Name => "Queso Azul";
 
-        public override string ImagePath => throw new System.NotImplementedException();
+        public override string ImagePath => @"\Resources\BlueCheese.jpg";
 
-        public override IngredientType Type => throw new System.NotImplementedException();
+        public override IngredientType Type => IngredientType.Dairy;
     }
 }

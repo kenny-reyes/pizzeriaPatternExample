@@ -49,13 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\IngredientFactory.cs" />
+    <Compile Include="Factories\FourCheesePizzaFactory.cs" />
+    <Compile Include="Factories\PizzaFactory.cs" />
     <Compile Include="IngredientList.cs" />
     <Compile Include="OrderList.cs" />
     <Compile Include="PizzaList.cs" />
     <Compile Include="Enums\IngredientType.cs" />
     <Compile Include="Ingredients\Bacon.cs" />
     <Compile Include="Ingredients\BlueCheese.cs" />
-    <Compile Include="Ingredients\Cheese.cs" />
     <Compile Include="Ingredients\Chicken.cs" />
     <Compile Include="Ingredients\Corn.cs" />
     <Compile Include="Ingredients\Eggs.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Ingredients\Sausage.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="Pizzas\FourCheesePizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,8 +81,6 @@
       <Name>Pizzeria.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Factories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

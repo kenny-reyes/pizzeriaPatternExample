@@ -2,10 +2,10 @@
 {
     public class Parmesano : Ingredient
     {
-        public override string Name => throw new System.NotImplementedException();
+        public override string Name => "Paresano";
 
-        public override string ImagePath => throw new System.NotImplementedException();
+        public override string ImagePath => @"\Resources\Parmesano.jpg";
 
-        public override IngredientType Type => throw new System.NotImplementedException();
+        public override IngredientType Type => IngredientType.Dairy;
     }
 }

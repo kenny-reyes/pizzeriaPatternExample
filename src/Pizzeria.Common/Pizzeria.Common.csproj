@@ -74,5 +74,43 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4Cheese.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\OldCheese.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Parmesano.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\BlueCheese.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Mozzarella.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bacon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Eggs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Ham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Onion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pineapple.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Sausage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ namespace Pizzeria.App.ViewModel
     {
         public MainViewModel()
         {
-            Pizzas.Add(new Pizza("Test", "/Resources/Corn.png", new IngredientList()));
+            Pizzas.Add(new Four);
         }
 
         /// <summary>

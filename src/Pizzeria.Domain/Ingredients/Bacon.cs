@@ -4,7 +4,7 @@
     {
         public override string Name => "Bacon";
 
-        public override string ImagePath => @"";
+        public override string ImagePath => @"\Resources\Bacon.jpg";
 
         public override IngredientType Type => IngredientType.Meat;
     }
