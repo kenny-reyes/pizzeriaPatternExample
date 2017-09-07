@@ -49,6 +49,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\OrderPizzaView.xaml.cs">
+      <DependentUpon>OrderPizzaView.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\EditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -63,6 +66,7 @@
     </Compile>
     <Compile Include="ViewModel\EditViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\OrderPizzaViewModel.cs" />
     <Compile Include="View\EditView.xaml.cs">
       <DependentUpon>EditView.xaml</DependentUpon>
     </Compile>
@@ -70,6 +74,10 @@
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\OrderPizzaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

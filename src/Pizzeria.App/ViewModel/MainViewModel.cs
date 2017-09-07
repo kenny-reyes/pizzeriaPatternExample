@@ -1,7 +1,7 @@
-﻿using Pizzeria.Common.MVVM;
+﻿using Pizzeria.App.View;
+using Pizzeria.Common.MVVM;
 using Pizzeria.Domain;
 using Pizzeria.Domain.Base;
-using System;
 using System.Windows.Input;
 
 namespace Pizzeria.App.ViewModel
@@ -43,6 +43,10 @@ namespace Pizzeria.App.ViewModel
 
         public void ModifyPizza()
         {
+            EditView editView = new EditView();
+            editView.DataContext = new EditViewModel(SelectedPizza);
+            editView.Owner = System.Windows.Application.Current.MainWindow;
+            editView.ShowDialog();
         }
 
         public bool CanModifyPizza()
@@ -52,10 +56,18 @@ namespace Pizzeria.App.ViewModel
 
         public void NewPizza()
         {
+            EditView editView = new EditView();
+            editView.DataContext = new EditViewModel(new Pizza { Name = "Pizza Custom", IngredientList = new IngredientList() });
+            editView.Owner = System.Windows.Application.Current.MainWindow;
+            editView.ShowDialog();
         }
 
         public void OrderPizza()
         {
+            OrderPizzaView orderView = new OrderPizzaView();
+            orderView.DataContext = new OrderPizzaViewModel(SelectedPizza);
+            orderView.Owner = System.Windows.Application.Current.MainWindow;
+            orderView.ShowDialog();
         }
 
         public bool CanOrderPizza()
