@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Pizzeria.Common.MVVM;
 using Pizzeria.Domain;
 using System.Windows;
 using System.Windows.Input;
 using Pizzeria.App.View;
+using Pizzeria.Domain.Base;
 using Pizzeria.Domain.Ingredients;
 
 namespace Pizzeria.App.ViewModel

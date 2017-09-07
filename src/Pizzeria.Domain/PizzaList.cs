@@ -1,8 +1,8 @@
-﻿using Pizzeria.Domain.Factories;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
+using Pizzeria.Domain.Factories;
 
-namespace Pizzeria.Domain.Base
+namespace Pizzeria.Domain
 {
     /// <summary>
     /// Singleton
@@ -19,12 +19,6 @@ namespace Pizzeria.Domain.Base
             Add(new FarmerPizzaFactory().GetPizza());
         }
 
-        public static PizzaList Instance
-        {
-            get
-            {
-                return _instance.Value;
-            }
-        }
+        public static PizzaList Instance => _instance.Value;
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 
-namespace Pizzeria.Domain.Base
+namespace Pizzeria.Domain
 {
     /// <summary>
     /// Singleton
@@ -14,12 +14,6 @@ namespace Pizzeria.Domain.Base
         {
         }
 
-        public static OrderList Instance
-        {
-            get
-            {
-                return _instance.Value;
-            }
-        }
+        public static OrderList Instance => _instance.Value;
     }
 }

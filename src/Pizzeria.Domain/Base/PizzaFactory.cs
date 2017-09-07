@@ -1,4 +1,4 @@
-﻿namespace Pizzeria.Domain.Factories
+﻿namespace Pizzeria.Domain.Base
 {
     /// <summary>
     /// Factory Pattern

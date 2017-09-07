@@ -1,5 +1,4 @@
 ﻿using Pizzeria.Domain.Ingredients;
-using System;
 
 namespace Pizzeria.Domain.Pizzas
 {

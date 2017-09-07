@@ -1,4 +1,4 @@
-﻿namespace Pizzeria.Domain
+﻿namespace Pizzeria.Domain.Enums
 {
     public  enum IngredientType
     {

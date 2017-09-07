@@ -1,7 +1,6 @@
 ﻿using Pizzeria.App.View;
 using Pizzeria.Common.MVVM;
 using Pizzeria.Domain;
-using Pizzeria.Domain.Base;
 using System.Windows.Input;
 
 namespace Pizzeria.App.ViewModel

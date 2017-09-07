@@ -1,4 +1,6 @@
-﻿namespace Pizzeria.Domain
+﻿using Pizzeria.Domain.Enums;
+
+namespace Pizzeria.Domain.Base
 {
     public abstract class Ingredient
     {

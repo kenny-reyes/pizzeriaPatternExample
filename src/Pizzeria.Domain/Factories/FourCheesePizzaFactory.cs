@@ -1,4 +1,5 @@
-﻿using Pizzeria.Domain.Pizzas;
+﻿using Pizzeria.Domain.Base;
+using Pizzeria.Domain.Pizzas;
 
 namespace Pizzeria.Domain.Factories
 {

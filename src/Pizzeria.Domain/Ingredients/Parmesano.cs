@@ -1,4 +1,6 @@
 ﻿using System;
+using Pizzeria.Domain.Base;
+using Pizzeria.Domain.Enums;
 
 namespace Pizzeria.Domain.Ingredients
 {

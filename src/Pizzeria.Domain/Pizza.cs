@@ -10,20 +10,20 @@ namespace Pizzeria.Domain
 
         public string Name
         {
-            get { return _name; }
-            set { _name = value; }
+            get => _name;
+            set => _name = value;
         }
 
         public string ImagePath
         {
-            get { return AppDomain.CurrentDomain.BaseDirectory + _imagePath; }
-            set { _imagePath = value; }
+            get => AppDomain.CurrentDomain.BaseDirectory + _imagePath;
+            set => _imagePath = value;
         }
 
         public IngredientList Ingredients
         {
-            get { return _ingredientList; }
-            set { _ingredientList = value; }
+            get => _ingredientList;
+            set => _ingredientList = value;
         }
 
         /// <summary>
