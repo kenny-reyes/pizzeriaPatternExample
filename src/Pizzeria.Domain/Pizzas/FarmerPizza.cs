@@ -8,11 +8,12 @@ namespace Pizzeria.Domain.Pizzas
         {
             Name = "Granjera";
             ImagePath = @"\Resources\FarmerPizza.jpg";
-            IngredientList = new IngredientList {
+            Ingredients = new IngredientList {
                 new Mozzarella(),
-                new BlueCheese(),
-                new Parmesano(),
-                new OldCheese()
+                new Sausage(),
+                new Onion(),
+                new Corn(),
+                new Chicken()
             };
         }
     }

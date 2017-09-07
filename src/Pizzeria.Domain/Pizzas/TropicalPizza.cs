@@ -1,4 +1,5 @@
 ﻿using Pizzeria.Domain.Ingredients;
+using System;
 
 namespace Pizzeria.Domain.Pizzas
 {
@@ -8,11 +9,10 @@ namespace Pizzeria.Domain.Pizzas
         {
             Name = "Tropical";
             ImagePath = @"\Resources\TropicalPizza.jpg";
-            IngredientList = new IngredientList {
+            Ingredients = new IngredientList {
                 new Mozzarella(),
-                new BlueCheese(),
-                new Parmesano(),
-                new OldCheese()
+                new Ham(),
+                new Pineapple()
             };
         }
     }

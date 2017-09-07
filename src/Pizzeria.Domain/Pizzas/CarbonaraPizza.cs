@@ -8,7 +8,7 @@ namespace Pizzeria.Domain.Pizzas
         {
             Name = "Carbonara";
             ImagePath = @"\Resources\CarbonaraPizza.jpg";
-            IngredientList = new IngredientList {
+            Ingredients = new IngredientList {
                 new Bacon(),
                 new Pancetta(),
                 new Onion(),

@@ -8,7 +8,7 @@ namespace Pizzeria.Domain.Pizzas
         {
             Name = "4 Quesos";
             ImagePath = @"\Resources\4Cheese.jpg";
-            IngredientList = new IngredientList {
+            Ingredients = new IngredientList {
                 new Mozzarella(),
                 new BlueCheese(),
                 new Parmesano(),

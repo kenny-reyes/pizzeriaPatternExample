@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         WindowStyle="ToolWindow"
         mc:Ignorable="d"
-        Height="300" Width="300" ResizeMode="NoResize">
+        Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

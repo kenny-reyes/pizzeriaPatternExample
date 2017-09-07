@@ -20,7 +20,7 @@ namespace Pizzeria.Domain
             set { _imagePath = value; }
         }
 
-        public IngredientList IngredientList
+        public IngredientList Ingredients
         {
             get { return _ingredientList; }
             set { _ingredientList = value; }
@@ -31,7 +31,7 @@ namespace Pizzeria.Domain
         /// </summary>
         public object Clone()
         {
-            return new Pizza { Name = _name, ImagePath = _imagePath, IngredientList = _ingredientList.Clone() as IngredientList };
+            return new Pizza { Name = _name, ImagePath = _imagePath, Ingredients = _ingredientList.Clone() as IngredientList };
         }
     }
 }

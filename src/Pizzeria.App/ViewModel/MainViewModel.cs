@@ -43,8 +43,10 @@ namespace Pizzeria.App.ViewModel
 
         public void ModifyPizza()
         {
+            // This Breaks the MVVM pattern but it si more somple to explain
             EditView editView = new EditView();
-            editView.DataContext = new EditViewModel(SelectedPizza);
+            // Prototype usage
+            editView.DataContext = new EditViewModel((Pizza)SelectedPizza.Clone(), editView);
             editView.Owner = System.Windows.Application.Current.MainWindow;
             editView.ShowDialog();
         }
@@ -57,7 +59,7 @@ namespace Pizzeria.App.ViewModel
         public void NewPizza()
         {
             EditView editView = new EditView();
-            editView.DataContext = new EditViewModel(new Pizza { Name = "Pizza Custom", IngredientList = new IngredientList() });
+            editView.DataContext = new EditViewModel(new Pizza { Name = "Pizza Custom", Ingredients = new IngredientList()}, editView);
             editView.Owner = System.Windows.Application.Current.MainWindow;
             editView.ShowDialog();
         }
@@ -65,7 +67,7 @@ namespace Pizzeria.App.ViewModel
         public void OrderPizza()
         {
             OrderPizzaView orderView = new OrderPizzaView();
-            orderView.DataContext = new OrderPizzaViewModel(SelectedPizza);
+            orderView.DataContext = new OrderPizzaViewModel(SelectedPizza, orderView);
             orderView.Owner = System.Windows.Application.Current.MainWindow;
             orderView.ShowDialog();
         }

@@ -1,6 +1,7 @@
 ﻿using Pizzeria.Common.MVVM;
 using Pizzeria.Domain;
 using Pizzeria.Domain.Base;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Pizzeria.App.ViewModel
@@ -10,10 +11,13 @@ namespace Pizzeria.App.ViewModel
         private Pizza _pizzaToEdit;
         private string _name;
         private string _phone;
+        private Window _window;
 
-        public OrderPizzaViewModel(Pizza pizza)
+        public OrderPizzaViewModel(Pizza pizza, Window window)
         {
             PizzaToOrder = pizza;
+            _window = window;
+
             OrderPizzaCommand = new RelayCommand(OrderPizza, CanOrderPizza);
         }
 
@@ -52,6 +56,7 @@ namespace Pizzeria.App.ViewModel
         public void OrderPizza()
         {
             OrderList.Instance.Add(new Order { Name = Name, Phone = Phone, Pizza = PizzaToOrder });
+            _window.Close();
         }
 
         public bool CanOrderPizza()
