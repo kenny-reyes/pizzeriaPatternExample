@@ -6,7 +6,7 @@ namespace Pizzeria.Domain.Ingredients
     {
         public override string Name => "Piña";
 
-        public override string ImagePath => AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Pineapple.";
+        public override string ImagePath => AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Pineapple.jpg";
 
         public override IngredientType Type => IngredientType.Vegetal;
     }

@@ -5,26 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Editar Pizza" 
-        Height="500" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+        Height="550" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="5" FontSize="18" Foreground="Blue"
+        <TextBlock Grid.Row="0" FontSize="18" Foreground="Blue"
                  Text="{Binding PizzaToEdit.Name}" />
-        <Image Grid.Row="1" Stretch="UniformToFill"
+        <Image Grid.Row="1" Grid.Column="0" Stretch="UniformToFill"
                             Source="{Binding PizzaToEdit.ImagePath}" />
-        <ListBox Grid.Column="1" Grid.RowSpan="5" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                ItemsSource="{Binding PizzaToEdit.Ingredients}">
+        <ListBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ItemsSource="{Binding PizzaToEdit.Ingredients}" 
+                 SelectedItem="{Binding IngredientToRemoveSelected}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="3">
@@ -39,7 +38,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.RowSpan="3" Stretch="UniformToFill"
                             Source="{Binding ImagePath}" />
-                        <TextBlock Grid.Column="1"
+                        <TextBlock Grid.Row="0" Grid.Column="1"
                             Text="{Binding Name}" FontSize="16" FontWeight="Bold" />
                         <TextBlock Grid.Row="1"  Grid.Column="1"
                             Text="{Binding Phone}" FontStyle="Italic" />
@@ -48,5 +47,35 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
+        <ListBox Grid.Row="2" Grid.Column="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                 ItemsSource="{Binding IngredientsToAdd}"
+                 SelectedItem="{Binding  IngredientToAddSelected}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" 
+                            Text="{Binding Name}" />
+                        <Image Grid.Row="1" Stretch="UniformToFill" 
+                               Source="{Binding ImagePath}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Grid.Row="3" Grid.Column="0" Content="Añadir Ingrediente" HorizontalAlignment="Right"
+                Command="{Binding AddIngredientCommand}"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="Quitar Ingrediente" HorizontalAlignment="Left"
+                Command="{Binding RemoveIngredientCommand}"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="Pedir Pizza" HorizontalAlignment="Left"
+                Command="{Binding OrderPizzaCommand}"/>
     </Grid>
 </Window>

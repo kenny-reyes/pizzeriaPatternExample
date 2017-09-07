@@ -17,9 +17,9 @@ namespace Pizzeria.App.ViewModel
             OrderPizzaCommand = new RelayCommand(OrderPizza, CanOrderPizza);
         }
 
-        public ICommand ModifyPizzaCommand { get; private set; }
-        public ICommand NewPizzaCommand { get; private set; }
-        public ICommand OrderPizzaCommand { get; private set; }
+        public ICommand ModifyPizzaCommand { get; }
+        public ICommand NewPizzaCommand { get; }
+        public ICommand OrderPizzaCommand { get; }
 
         /// <summary>
         /// Using Singleton
@@ -35,10 +35,7 @@ namespace Pizzeria.App.ViewModel
                 _selectedPizza = value;
                 OnPropertyChanged("SelectedPizza");
             }
-            get
-            {
-                return _selectedPizza;
-            }
+            get => _selectedPizza;
         }
 
         public void ModifyPizza()
@@ -74,7 +71,7 @@ namespace Pizzeria.App.ViewModel
 
         public bool CanOrderPizza()
         {
-            return SelectedPizza != null ? true : false;
+            return SelectedPizza != null;
         }
     }
 }
